@@ -1,4 +1,4 @@
-##Asset Tracker WebApp
+#Asset Tracker WebApp
 
 
 Live Demo
@@ -76,6 +76,7 @@ A high-level view of the key directories:
 ├── package.json
 ├── next.config.mjs
 └── README.md
+
 
 
 All API endpoints live under pages/api/.
