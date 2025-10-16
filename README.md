@@ -1,40 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+##Asset Tracker WebApp
 
-## Getting Started
 
-First, run the development server:
+Live Demo
 
-```bash
+A web application to manage, track, and monitor assets efficiently. Built with Next.js, this project enables you to register assets, view status, and maintain audit logs via a modern web interface and RESTful APIs.
+
+Table of Contents
+
+Features
+
+Technologies
+
+Architecture & Folder Structure
+
+Installation & Setup
+
+Usage
+
+API Endpoints
+
+Configuration
+
+Testing
+
+Deployment
+
+Contributing
+
+License
+
+Contact / Support
+
+Features
+
+Add, update, delete, and view tracked assets
+
+Asset metadata (e.g. name, type, serial number, status)
+
+Audit trail / history of changes
+
+User authentication and access control (if applicable)
+
+Real-time or periodic status updates (if implemented)
+
+Responsive UI and RESTful backend
+
+(Customize this section to reflect your implemented features precisely.)
+
+Technologies
+
+Frontend / Fullstack Framework: Next.js 
+GitHub
+
+Styling: (e.g. CSS, Tailwind CSS, styled-components — specify what you used)
+
+Backend / API Routes: pages/api (Next.js API routes) 
+GitHub
+
+Database / Storage: (e.g. PostgreSQL, MongoDB, SQLite, etc. — specify)
+
+Others / Utilities: (e.g. Axios / Fetch, Authentication libraries, State management, etc.)
+
+Architecture & Folder Structure
+
+A high-level view of the key directories:
+
+.
+├── pages
+│   ├── api         # API route handlers
+│   ├── index.js    # Main landing / dashboard page
+│   └── … (other pages)
+├── public          # Public assets (images, favicon, etc.)
+├── styles          # CSS / styling files
+├── utils           # Utility functions, helpers
+├── package.json
+├── next.config.mjs
+└── README.md
+
+
+All API endpoints live under pages/api/.
+
+React pages and components live under pages/ (or a subfolder for components).
+
+Utility modules (e.g. for validation, formatting) are under utils/.
+
+Installation & Setup
+Prerequisites
+
+Node.js (v16+ recommended)
+
+npm or yarn or pnpm
+
+Database (if external)
+
+Environment variables (see Configuration below)
+
+Steps
+# Clone the repository
+git clone https://github.com/Knox3002/Asset_tracker_webapp.git
+cd Asset_tracker_webapp
+
+# Install dependencies
+npm install
+# or
+yarn install
+# or
+pnpm install
+
+# Set up environment variables (see Configuration)
+
+# Run development server
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
+
+
+Then open http://localhost:3000
+ in your browser.
+
+Usage
+
+Navigate to the web interface
+
+Log in (if authentication is implemented)
+
+Create new assets, update existing ones, delete or archive as needed
+
+View change history or audit logs (if available)
+
+Search, filter, or classify assets
+
+(Add screenshots or GIFs here if available to illustrate key flows.)
+
+API Endpoints
+Method	URL Path	Description
+GET	/api/assets	Fetch list of assets
+POST	/api/assets	Create a new asset
+GET	/api/assets/[id]	Fetch a single asset
+PUT	/api/assets/[id]	Update an asset
+DELETE	/api/assets/[id]	Delete / archive an asset
+…	…	…
+
+(Adjust and expand based on your actual routes.)
+
+Configuration
+
+Create a .env.local file (or the appropriate env file) in the project root. Example:
+
+DATABASE_URL=your_database_connection_string
+JWT_SECRET=your_jwt_secret_key
+NEXT_PUBLIC_API_URL=http://localhost:3000/api
+# Add other environment-specific settings
+
+
+Ensure that sensitive secrets (e.g. database credentials, JWT keys) are never committed to the repo.
+
+Testing
+
+If you have tests (unit / integration), document how to run them:
+
+npm run test
 # or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+yarn test
